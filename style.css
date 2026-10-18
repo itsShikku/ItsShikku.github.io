@@ -3,10 +3,10 @@
     --card: #161920;
     --text: #c9d1d9;
     --text-bright: #ffffff;
-    --accent: #ffb454; /* Ein warmes, unaufdringliches Orange/Amber statt quietschbuntem Neon */
+    --accent: #ffb454;
     --muted: #6e7681;
     --border: #21262d;
-    --font-mono: 'Share Tech Mono', monospace;
+    --font-mono: 'JetBrains Mono', monospace;
     --font-sans: 'Spline Sans', sans-serif;
 }
 
@@ -27,7 +27,7 @@ body {
     line-height: 1.6;
 }
 
-/* Dezenter Retro-Scanline-Effekt für den analogen Look */
+/* Dezenter Retro-Scanline-Effekt */
 .scanlines {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -46,7 +46,7 @@ body {
     gap: 40px;
 }
 
-/* Header / Terminal Prompt Style */
+/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ body {
     font-size: 2.2rem;
     color: var(--text-bright);
     margin-bottom: 8px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .intro .sub {
@@ -102,7 +102,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Item List (Baustellen) */
+/* Item List */
 .item-list {
     list-style: none;
     display: flex;
@@ -124,6 +124,7 @@ body {
 
 .item-title {
     display: block;
+    font-family: var(--font-mono);
     font-weight: 600;
     color: var(--text-bright);
     margin-bottom: 4px;
@@ -134,7 +135,7 @@ body {
     color: var(--muted);
 }
 
-/* Inline List (Tech Stack) */
+/* Inline List */
 .inline-list {
     font-family: var(--font-mono);
     font-size: 0.9rem;
