@@ -3,51 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ItsShikku | Portfolio Test</title>
+    <title>Shikku | Systemintegrator & Junior DevOps</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts für den Tech-Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts & Font Awesome für Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Partikel/Hintergrund-Effekt -->
+    <!-- Cyber-Grid Hintergrund -->
     <div class="cyber-grid"></div>
 
     <main class="container">
-        <!-- Willkommens-Sektion mit Typing-Effekt -->
-        <section class="hero">
-            <p class="tagline">&gt; Systemintegrator &amp; Developer</p>
-            <h1>Moin, ich bin <span class="highlight">Shikku</span>.</h1>
-            <p class="subtitle">Hier entsteht meine persönliche High-Performance-Webseite.</p>
-        </section>
+        <!-- Hero Sektion -->
+        <header class="hero">
+            <div class="badge">&gt; Systemintegrator &amp; Junior DevOps</div>
+            <h1>Moin, ich bin <span class="highlight">Shikku</span>. 👋</h1>
+            <p class="subtitle">Ich mag Pizza, Heavy Riffs &amp; Flows und bin gerade voll auf <strong>IaC</strong> hängengeblieben.</p>
+        </header>
 
-        <!-- Interaktives Test-Terminal -->
+        <!-- Interactive Terminal -->
         <section class="terminal-card">
             <div class="terminal-header">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="title">shikku@portfolio:~</span>
+                <span class="title">shikku@nixos:~ (zsh)</span>
             </div>
             <div class="terminal-body">
-                <p><span class="prompt">$</span> status</p>
-                <p class="output">✔ GitHub Pages Deployment: Active</p>
-                <p class="output">✔ Flex-Level: Maximum</p>
-                <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+                <p><span class="prompt">shikku@nixos:~$</span> nix-shell --run "whoami"</p>
+                <p class="output">➜ Systemintegrator & Junior DevOps Engineer with passion for GitOps, Homelabs & Infrastructure as Code.</p>
+                <p><span class="prompt">shikku@nixos:~$</span> uptime</p>
+                <p class="output">➜ 100% Declarative | Built with Nix, Terraform & Ansible</p>
+                <p><span class="prompt">shikku@nixos:~$</span> <span class="cursor">_</span></p>
             </div>
         </section>
 
-        <!-- Kleine Test-Boxen zum Hovern -->
-        <section class="grid">
-            <div class="card">
-                <h3>⚡ Dynamisch</h3>
-                <p>Reines CSS &amp; JavaScript für flüssige Animationen ohne schweren Ballast.</p>
-            </div>
-            <div class="card">
-                <h3>🚀 Hosting</h3>
-                <p>Läuft direkt über GitHub Pages – schnell, sicher und kostenlos.</p>
+        <!-- Tech Stack / Skills -->
+        <section class="section">
+            <h2><i class="fa-solid fa-code-branch"></i> Tech Stack &amp; Skills</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-server"></i> Betriebssysteme &amp; Virtualisierung</h3>
+                    <div class="tags">
+                        <span class="tag main-tag"><i class="fa-brands fa-linux"></i> Arch Linux</span>
+                        <span class="tag main-tag"><i class="fa-solid fa-snowflake"></i> NixOS</span>
+                        <span class="tag">CachyOS</span>
+                        <span class="tag"><i class="fa-brands fa-windows"></i> Windows &amp; Windows Server</span>
+                        <span class="tag"><i class="fa-solid fa-cubes"></i> Proxmox</span>
+                        <span class="tag"><i class="fa-brands fa-docker"></i> Docker</span>
+                        <span class="tag"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-network-wired"></i> Cloud, Hardware &amp; Admin</h3>
+                    <div class="tags">
+                        <span class="tag">HPE ProLiant Cluster</span>
+                        <span class="tag">Active Directory</span>
+                        <span class="tag">Microsoft Admin Center</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-terminal"></i> Skripting &amp; Code</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fa-solid fa-terminal"></i> Bash</span>
+                        <span class="tag">PowerShell</span>
+                        <span class="tag">Webstack (HTML/CSS/JS)</span>
+                        <span class="tag">Lua</span>
+                        <span class="tag">Nix Expression Language</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-gears"></i> DevOps &amp; Tools</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+                        <span class="tag"><i class="fa-solid fa-robot"></i> Ansible</span>
+                        <span class="tag"><i class="fa-solid fa-infinity"></i> ArgoCD</span>
+                        <span class="tag"><i class="fa-solid fa-layer-group"></i> Terraform</span>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <!-- Projekte -->
+        <section class="section">
+            <h2><i class="fa-solid fa-diagram-project"></i> Selected Projects</h2>
+            <div class="projects-grid">
+                
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-snowflake project-icon"></i>
+                        <h3>Modulare NixOS-Struktur</h3>
+                    </div>
+                    <p>Vollständig deklarative NixOS-Konfiguration mit einer Bibliothek aus wiederverwendbaren Setups, die innerhalb von Sekunden reproduzierbar aufgesetzt werden können.</p>
+                    <div class="project-tags">
+                        <span>NixOS</span>
+                        <span>IaC</span>
+                        <span>Declarative</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-microchip project-icon"></i>
+                        <h3>Homelab mit Proxmox &amp; Docker</h3>
+                    </div>
+                    <p>Eigenes Homelab auf Proxmox VE zur Orchestrierung containerisierter Workloads. Automatisierte Bereitstellung und Routing von Services via Docker.</p>
+                    <div class="project-tags">
+                        <span>Proxmox</span>
+                        <span>Docker</span>
+                        <span>Homelab</span>
+                        <span>DevOps</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact & Links -->
+        <footer class="footer">
+            <h2><i class="fa-solid fa-paper-plane"></i> Let's Connect</h2>
+            <p>Du findest mich und meine Dotfiles/Code-Repositories auf folgenden Plattformen:</p>
+            <div class="social-links">
+                <a href="https://github.com/ItsShikku" target="_blank" rel="noopener noreferrer" class="social-btn github">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-btn discord">
+                    <i class="fa-brands fa-discord"></i> Discord
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 Shikku. Built with HTML, CSS &amp; GitHub Pages.</p>
+        </footer>
     </main>
 
 </body>
