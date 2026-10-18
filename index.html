@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shikku.space</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- JetBrains Mono & Spline Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Spline+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shikku</title>
+<meta name="description" content="Shikku – Systemintegrator, angehender DevOps Junior, Gamer und Bastler.">
+<meta name="theme-color" content="#0d0f17">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="snow" aria-hidden="true"></canvas>
 
-    <div class="scanlines"></div>
+<header class="top">
+  <a href="#hero" class="brand">shikku@home:~$</a>
+  <nav>
+    <a href="#about" data-i18n="nav_about">Über mich</a>
+    <a href="#projects" data-i18n="nav_projects">Projekte</a>
+    <a href="#links" data-i18n="nav_links">Links</a>
+    <button id="lang" type="button" aria-label="Sprache wechseln">EN</button>
+  </nav>
+</header>
 
-    <main class="container">
-        
-        <!-- Header -->
-        <header class="header">
-            <div class="status-dot"></div>
-            <span class="host">shikku@local:~</span>
-        </header>
+<main>
+  <section id="hero">
+    <div class="banner" role="img" aria-label="Pixel-Szene aus Celeste im Schnee"></div>
+    <div class="id">
+      <img class="avatar" src="assets/avatar.png" alt="Shikku als Roter Panda">
+      <div>
+        <h1 class="glitch" data-text="Shikku">Shikku</h1>
+        <p class="role" data-i18n="role">Systemintegrator · angehender DevOps Junior</p>
+      </div>
+    </div>
+    <pre class="boot" id="boot" aria-label="Kurzbio"></pre>
+  </section>
 
-        <!-- Intro -->
-        <section class="intro">
-            <h1>Moin. Ich bin Shikku.</h1>
-            <p class="sub">Systemintegrator, Linux-Tüftler &amp; Freund von ordentlichem Code.</p>
-            <p class="desc">
-                Hier landet Kram, den ich gerade aufbaue oder feiere. Aktuell komplett im NixOS- und IaC-Kaninchenbau versunken. Wenn ich nicht gerade configs debugge, gibt's Pizza und Heavy Riffs.
-            </p>
-        </section>
+  <section id="about">
+    <h2>/about</h2>
+    <p data-i18n="about1">Ich bin Shikku. Tagsüber integriere ich Systeme, abends baue ich welche um: Hardware aufschrauben, NixOS konfigurieren, Linux so lange ricen, bis es genau zu mir passt.</p>
+    <p data-i18n="about2">Dazwischen zocke ich gern MMORPGs, Strategie und Retro-Klassiker. Und ja, ich überlege, daraus irgendwann Content zu machen. Sicher ist das noch nicht.</p>
+    <div class="grid">
+      <article>
+        <h3 data-i18n="c1t">Gaming</h3>
+        <p data-i18n="c1d">MMORPGs, Strategie, Retro. Je mehr Systeme zum Optimieren, desto besser.</p>
+      </article>
+      <article>
+        <h3 data-i18n="c2t">Systeme &amp; Hardware</h3>
+        <p data-i18n="c2d">NixOS, Linux-Ricing, Basteln an Hardware. Die meisten Experimente liegen noch in privaten Repos.</p>
+      </article>
+    </div>
+  </section>
 
-        <!-- Sektion: Now / Schrauberecke -->
-        <section class="block">
-            <h2>// Aktuelle Baustellen</h2>
-            <ul class="item-list">
-                <li>
-                    <span class="item-title">Modulares NixOS</span>
-                    <span class="item-text">Deklarative Setups, die überall gleich laufen. Keine Lust mehr auf Handarbeit.</span>
-                </li>
-                <li>
-                    <span class="item-title">Proxmox Homelab</span>
-                    <span class="item-text">Lokaler Playground für Container-Workloads und Netzwerk-Spielereien.</span>
-                </li>
-            </ul>
-        </section>
+  <section id="projects">
+    <h2>/projects</h2>
+    <p class="status" data-i18n="proj">[..] Noch nichts veröffentlicht. Es werden aber bald einige Projekte kommen!</p>
+    <!-- PROJEKT-VORLAGE: Kommentar entfernen, sobald es soweit ist
+    <div class="grid">
+      <article>
+        <h3>Projektname</h3>
+        <p>Kurze Beschreibung, was es tut und womit es gebaut ist.</p>
+        <a class="tag" href="https://github.com/itsShikku/REPO">GitHub</a>
+      </article>
+    </div>
+    -->
+  </section>
 
-        <!-- Sektion: Stack -->
-        <section class="block">
-            <h2>// Tech & Tools</h2>
-            <p class="inline-list">
-                <span>Arch Linux</span> / 
-                <span>NixOS</span> / 
-                <span>CachyOS</span> / 
-                <span>Docker &amp; K8s</span> / 
-                <span>Ansible</span> / 
-                <span>Terraform</span> / 
-                <span>Bash / PowerShell</span> / 
-                <span>HPE ProLiant</span>
-            </p>
-        </section>
+  <section id="links">
+    <h2>/links</h2>
+    <ul class="links">
+      <li><a href="https://github.com/itsShikku" rel="me noopener" target="_blank">GitHub</a><span>github.com/itsShikku</span></li>
+      <li><button type="button" id="dc" class="copy">Discord</button><span id="dcval">itsshikku</span></li>
+    </ul>
+  </section>
+</main>
 
-        <!-- Sektion: Links -->
-        <section class="block">
-            <h2>// Outernet</h2>
-            <div class="links">
-                <a href="https://github.com/ItsShikku" target="_blank" rel="noopener">github.com/ItsShikku</a>
-                <span class="sep">/</span>
-                <span class="muted">Discord: itsShikku</span>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>100% handgeschrieben &amp; ohne Tracking.</p>
-        </footer>
-
-    </main>
-
+<footer>
+  <span>© <span id="year"></span> Shikku</span>
+  <span data-i18n="foot">In Pizza we trust.</span>
+  <!-- Später bei Bedarf aktivieren:
+  <a href="impressum.html">Impressum</a> <a href="datenschutz.html">Datenschutz</a>
+  -->
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
