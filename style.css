@@ -1,0 +1,159 @@
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: #131c2e;
+    --accent: #00ffcc;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --font-code: 'Fira Code', monospace;
+    --font-main: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Subtiler Hintergrund-Grid-Effekt */
+.cyber-grid {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tagline {
+    font-family: var(--font-code);
+    color: var(--accent);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+}
+
+.highlight {
+    color: var(--accent);
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+}
+
+/* Terminal Design */
+.terminal-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #1a2639;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px; height: 12px; border-radius: 50%;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.terminal-header .title {
+    margin-left: 10px;
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+.terminal-body {
+    padding: 20px;
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+}
+
+.prompt {
+    color: var(--accent);
+}
+
+.output {
+    color: #a5b4fc;
+    margin: 5px 0 15px 15px;
+}
+
+/* Blinkender Cursor */
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Grid für Info-Karten */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Responsive für Smartphones */
+@media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+}
